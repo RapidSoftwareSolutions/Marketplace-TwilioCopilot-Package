@@ -29,7 +29,7 @@ class PackageControllerTest extends WebTestCase
         $client = static::createClient();
         $client->request(
             'POST',
-            '/api/twilioCopilot/sendSms',
+            '/api/TwilioCopilot/sendSms',
             [],
             [],
             [],
@@ -48,7 +48,7 @@ class PackageControllerTest extends WebTestCase
         $client = static::createClient();
         $client->request(
             'POST',
-            '/api/twilioCopilot/sendMms',
+            '/api/TwilioCopilot/sendMms',
             [],
             [],
             [],
@@ -66,7 +66,7 @@ class PackageControllerTest extends WebTestCase
     public function testMetadata()
     {
         $client = static::createClient();
-        $client->request('GET', '/api/twilioCopilot');
+        $client->request('GET', '/api/TwilioCopilot');
         $response = $client->getResponse();
         $data = json_decode($response->getContent(), true);
 

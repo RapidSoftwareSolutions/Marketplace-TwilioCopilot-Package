@@ -16,7 +16,7 @@ class PackageController extends Controller
 {
     /**
      *
-     * @Route("/api/{packageName}", requirements={"packageName": "twilioCopilot"})
+     * @Route("/api/{packageName}", requirements={"packageName": "TwilioCopilot"})
      * @Method({"GET"})
      *
      * @return JsonResponse
@@ -28,7 +28,7 @@ class PackageController extends Controller
 
     /**
      *
-     * @Route("/api/{packageName}/sendSms", requirements={"packageName": "twilioCopilot"})
+     * @Route("/api/{packageName}/sendSms", requirements={"packageName": "TwilioCopilot"})
      * @Method({"POST"})
      *
      * @return JsonResponse
@@ -51,7 +51,7 @@ class PackageController extends Controller
 
     /**
      *
-     * @Route("/api/{packageName}/sendMms", requirements={"packageName": "twilioCopilot"})
+     * @Route("/api/{packageName}/sendMms", requirements={"packageName": "TwilioCopilot"})
      * @Method({"POST"})
      *
      * @return JsonResponse
