@@ -2,7 +2,7 @@ parameters:
     app_bundle.packageName: TwilioCopilot
     app_bundle.metadata:
         package: "%app_bundle.packageName%"
-        tagline: TwilioCopilot API Wrapper
+        tagline: TwilioCopilot API
         description: This package allows to send sms and mms messages using the Twilio Copilot platform.
         image: https://www.twilio.com/marketing/bundles/marketing/img/favicons/favicon.ico
         repo: https://github.com/RapidSoftwareSolutions/Marketplace-TwilioCopilot-Package
