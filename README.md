@@ -13,8 +13,8 @@ Send text message
 
 | Field            | Type     | Description  |
 | -------------    |-------------     | -----|
-| `accountSid`         |string  | A 34 character string that uniquely identifies this account. |
-| `accountToken`         |string  | The authorization token for this account. |
+| `accountSid`         |credentials  | A 34 character string that uniquely identifies this account. |
+| `accountToken`         |credentials  | The authorization token for this account. |
 | `from` |string  | The phone number or client identifier to use as the caller id. If using a phone number, it must be a Twilio number or a Verified outgoing caller id for your account. |
 | `messagingServiceSid` |string  | The 34 character unique id of the Messaging Service you want to associate with this Message. Set this parameter to use the Messaging Service Settings and Copilot Features you have configured. When only this parameter is set, Twilio will use your enabled Copilot Features to select the From phone number for delivery. |
 | `to` |string  | The phone number, SIP address or client identifier to call. |
@@ -89,8 +89,8 @@ Send media message
 
 | Field            | Type     | Description  |
 | -------------    |-------------     | -----|
-| `accountSid`         |string  | A 34 character string that uniquely identifies this account. |
-| `accountToken`         |string  | The authorization token for this account. |
+| `accountSid`         |credentials  | A 34 character string that uniquely identifies this account. |
+| `accountToken`         |credentials  | The authorization token for this account. |
 | `from` |string  | The phone number or client identifier to use as the caller id. If using a phone number, it must be a Twilio number or a Verified outgoing caller id for your account. |
 | `messagingServiceSid` |string  | The 34 character unique id of the Messaging Service you want to associate with this Message. Set this parameter to use the Messaging Service Settings and Copilot Features you have configured. When only this parameter is set, Twilio will use your enabled Copilot Features to select the From phone number for delivery. |
 | `to` |string  | The phone number, SIP address or client identifier to call. |
