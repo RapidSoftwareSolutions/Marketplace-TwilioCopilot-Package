@@ -17,11 +17,11 @@ parameters:
           args:
             -
               name: accountSid
-              type: Credentials
+              type: credentials
               info: "A 34 character string that uniquely identifies this account."
             -
               name: accountToken
-              type: Credentials
+              type: credentials
               info: "The authorization token for this account."
             -
               name: from
@@ -67,11 +67,11 @@ parameters:
           args:
             -
               name: accountSid
-              type: Credentials
+              type: credentials
               info: "A 34 character string that uniquely identifies this account."
             -
               name: accountToken
-              type: Credentials
+              type: credentials
               info: "The authorization token for this account."
             -
               name: from
