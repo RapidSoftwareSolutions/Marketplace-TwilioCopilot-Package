@@ -5,6 +5,18 @@ parameters:
         tagline: TwilioCopilot API
         description: This package allows to send sms and mms messages using the Twilio Copilot platform.
         image: https://www.twilio.com/marketing/bundles/marketing/img/favicons/favicon.ico
+        keywords:
+          - API
+          - call
+          - marketing
+          - message
+          - messaging 
+          - mms
+          - phone 
+          - sms
+          - text
+          - voice
+          - copilot
         repo: https://github.com/RapidSoftwareSolutions/Marketplace-TwilioCopilot-Package
         accounts:
           domain: twilio.com
@@ -14,47 +26,58 @@ parameters:
         blocks:
         -
           name: sendSms
+          description: This block allows you to send sms.
           args:
             -
               name: accountSid
               type: credentials
               info: "A 34 character string that uniquely identifies this account."
+              required: true
             -
               name: accountToken
               type: credentials
               info: "The authorization token for this account."
+              required: true
             -
               name: from
               type: String
               info: "A Twilio phone number (in E.164 format) or alphanumeric sender ID enabled for the type of message you wish to send. Phone numbers or short codes purchased from Twilio work here. You cannot (for example) spoof messages from your own cell phone number."
+              required: true
             -
               name: messagingServiceSid
               type: String
-              info: "The 34 character unique id of the Messaging Service you want to associate with this Message. Set this parameter to use the Messaging Service Settings and Copilot Features you have configured. When only this parameter is set, Twilio will use your enabled Copilot Features to select the From phone number for delivery."
+              info: "Required if from not provided. The 34 character unique id of the Messaging Service you want to associate with this Message. Set this parameter to use the Messaging Service Settings and Copilot Features you have configured. When only this parameter is set, Twilio will use your enabled Copilot Features to select the From phone number for delivery."
+              required: false
             -
               name: to
               type: String
               info: "The destination phone number. Format with a '+' and country code e.g., +16175551212 (E.164 format)."
+              required: true
             -
               name: body
               type: String
               info: "The text of the message you want to send, limited to 1600 characters."
+              required: true
             -
               name: statusCallback
               type: String
-              info: "Optional: A URL that Twilio will POST to each time your message status changes to one of the following: queued, failed, sent, delivered, or undelivered."
+              info: "A URL that Twilio will POST to each time your message status changes to one of the following: queued, failed, sent, delivered, or undelivered."
+              required: false
             -
               name: applicationSid
               type: String
-              info: "Optional: Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
+              info: "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
+              required: false
             -
               name: maxPrice
               type: String
-              info: "Optional: The total maximum price in US dollars acceptable for the message to be delivered."
+              info: "The total maximum price in US dollars acceptable for the message to be delivered."
+              required: false
             -
               name: provideFeedback
               type: String
-              info: "Optional: Set this value to true if you are sending messages that have a trackable user action and you intend to confirm delivery of the message using the Message Feedback API. This parameter is set to false by default."
+              info: "Set this value to true if you are sending messages that have a trackable user action and you intend to confirm delivery of the message using the Message Feedback API. This parameter is set to false by default."
+              required: false
           callbacks:
             -
               name: error
@@ -64,47 +87,58 @@ parameters:
               info: "Success"
         -
           name: sendMms
+          description: This block allows you to send mms.
           args:
             -
               name: accountSid
               type: credentials
               info: "A 34 character string that uniquely identifies this account."
+              required: true
             -
               name: accountToken
               type: credentials
               info: "The authorization token for this account."
+              required: true
             -
               name: from
               type: String
               info: "A Twilio phone number (in E.164 format) or alphanumeric sender ID enabled for the type of message you wish to send. Phone numbers or short codes purchased from Twilio work here. You cannot (for example) spoof messages from your own cell phone number."
+              required: true
             -
               name: messagingServiceSid
               type: String
-              info: "The 34 character unique id of the Messaging Service you want to associate with this Message. Set this parameter to use the Messaging Service Settings and Copilot Features you have configured. When only this parameter is set, Twilio will use your enabled Copilot Features to select the From phone number for delivery."
+              info: "Required if from not provided. The 34 character unique id of the Messaging Service you want to associate with this Message. Set this parameter to use the Messaging Service Settings and Copilot Features you have configured. When only this parameter is set, Twilio will use your enabled Copilot Features to select the From phone number for delivery."
+              required: false
             -
               name: to
               type: String
               info: "The destination phone number. Format with a '+' and country code e.g., +16175551212 (E.164 format)."
+              required: true
             -
               name: mediaUrl
               type: String
               info: "The URL of the media you wish to send out with the message. gif , png and jpeg content is currently supported and will be formatted correctly on the recipient's device."
+              required: true
             -
               name: statusCallback
               type: String
-              info: "Optional: A URL that Twilio will POST to each time your message status changes to one of the following: queued, failed, sent, delivered, or undelivered."
+              info: "A URL that Twilio will POST to each time your message status changes to one of the following: queued, failed, sent, delivered, or undelivered."
+              required: false
             -
               name: applicationSid
               type: String
-              info: "Optional: Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
+              info: "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
+              required: false
             -
               name: maxPrice
               type: String
-              info: "Optional: The total maximum price in US dollars acceptable for the message to be delivered."
+              info: "The total maximum price in US dollars acceptable for the message to be delivered."
+              required: false
             -
               name: provideFeedback
               type: String
-              info: "Optional: Set this value to true if you are sending messages that have a trackable user action and you intend to confirm delivery of the message using the Message Feedback API. This parameter is set to false by default."
+              info: "Set this value to true if you are sending messages that have a trackable user action and you intend to confirm delivery of the message using the Message Feedback API. This parameter is set to false by default."
+              required: false
           callbacks:
             -
               name: error

@@ -40,49 +40,6 @@ Send text message
 		"body": "text"
 }
 ```
-#### Response example
-```json
-{
-	"callback": "success",
-	"contextWrites": {
-		"to": {
-			"sid": "SM9d72da46545d448cb448d7e2ab009136",
-			"body": "Sent from your Twilio trial account - http:\/\/demo.twilio.com\/docs\/voice.xml",
-			"dateCreated": {
-				"date": "2016-09-15 20:46:23.000000",
-				"timezone_type": 1,
-				"timezone": "+00:00"
-			},
-			"dateUpdated": {
-				"date": "2016-09-15 20:46:23.000000",
-				"timezone_type": 1,
-				"timezone": "+00:00"
-			},
-			"accountSid": "AC5f37acb24007a320eefb5ffaeb498a78",
-			"to": "+15008850006",
-			"from": "XXXX",
-			"status": "queued",
-			"price": null,
-			"direction": "outbound-api",
-			"apiVersion": "2010-04-01",
-			"uri": "\/2010-04-01\/Accounts\/AC5f37acb24007a320eefb5ffaeb498a78\/Messages\/SM9d72da46545d448cb448d7e2ab009136.json",
-			"subresourceUris": {
-				"media": "\/2010-04-01\/Accounts\/AC5f37acb24007a320eefb5ffaeb498a78\/Messages\/SM9d72da46545d448cb448d7e2ab009136\/Media.json"
-			},
-			"priceUnit": "USD",
-			"dateSent": {
-				"date": "2016-09-15 20:46:23.000000",
-				"timezone_type": 3,
-				"timezone": "UTC"
-			},
-			"errorCode": null,
-			"errorMessage": null,
-			"numMedia": "0",
-			"numSegments": "1"
-		}
-	}
-}
-```
 
 ## /api/twilioCopilot/sendMms
 Send media message
@@ -110,48 +67,7 @@ Send media message
 		"mediaUrl": "http://demo.twilio.com/docs/voice.xml"
 }
 ```
-#### Response example
-```json
-{
-	"callback": "success",
-	"contextWrites": {
-		"to": {
-			"sid": "MM2e5f462d1a034a72809294fac6493cf1",
-			"dateCreated": {
-				"date": "2016-09-15 20:43:00.000000",
-				"timezone_type": 3,
-				"timezone": "UTC"
-			},
-			"dateUpdated": {
-				"date": "2016-09-15 20:43:00.000000",
-				"timezone_type": 3,
-				"timezone": "UTC"
-			},
-			"accountSid": "AC5f37acb24007a320eefb5ffaeb498a78",
-			"to": "+15005650006",
-			"from": "XXXX",
-			"status": "queued",
-			"price": null,
-			"direction": "outbound-api",
-			"apiVersion": "2010-04-01",
-			"uri": "\/2010-04-01\/Accounts\/AC5f37acb24007a320eefb5ffaeb498a78\/Messages\/MM2e5f462d1a034a72809294fac6493cf1.json",
-			"subresourceUris": {
-				"media": "\/2010-04-01\/Accounts\/AC5f37acb24007a320eefb5ffaeb498a78\/Messages\/MM2e5f462d1a034a72809294fac6493cf1\/Media.json"
-			},
-			"priceUnit": "USD",
-			"dateSent": {
-				"date": "2016-09-15 20:43:00.000000",
-				"timezone_type": 3,
-				"timezone": "UTC"
-			},
-			"errorCode": null,
-			"errorMessage": null,
-			"numMedia": "0",
-			"numSegments": "1"
-		}
-	}
-}
-```
+
 ## Errors
 | Error            | Description     |
 | -------------    |-------------     |
