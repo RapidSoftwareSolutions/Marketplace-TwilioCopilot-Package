@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Twilio\Exceptions\ConfigurationException;
 use Twilio\Exceptions\RestException;
 
@@ -70,6 +71,27 @@ class PackageController extends Controller
         } catch (ConfigurationException $e) {
             return new JsonResponse(['callback' => 'error', 'contextWrites' => ['to' => $e->getMessage()]]);
         }
+    }
+
+    /**
+     *
+     * @Route("/api/{packageName}/webhookEvent", requirements={"packageName": "Twilio"})
+     * @Method({"POST"})
+     *
+     * @return JsonResponse
+     */
+    public function webhookEventAction()
+    {
+        $request = new Request();
+        $body = json_decode($request->getContent(), true);
+        $reply = [
+            "http_resp" => "",
+            "client_msg" => $body['args']['body'],
+            "params" => $body['args']['params']
+        ];
+        $result['callback'] = 'success';
+        $result['contextWrites']['to'] = $reply;
+        return new JsonResponse($result);
     }
 
 }

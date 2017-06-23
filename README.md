@@ -9,6 +9,27 @@ This package allows to send sms and mms messages using the Twilio Copilot platfo
  2. Pay for account or use free trial.
  3. Go to Account->Account Settings and find API Credentials block.
  4. Copy your `accountSid` and `accountToken`.
+ 
+## Custom datatypes:
+  |Datatype|Description|Example
+  |--------|-----------|----------
+  |Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+  |Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+  |List|Simple array|```["123", "sample"]```
+  |Select|String with predefined values|```sample```
+  |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
+ 
+## Webhook credentials
+  Please use SDK to test this feature.
+  1. Go to [RapidAPI](http://rapidapi.com)
+  2. Log in or create an account
+  3. Go to [My apps](https://dashboard.rapidapi.com/projects)
+  4. Add new project with projectName to get your project Key
+ 
+  | Field      | Type       | Description
+  |------------|------------|----------
+  | projectName     | credentials| Your RapidAPI project name
+  | projectKey | credentials     | Your RapidAPI project key
 
 ## /api/twilioCopilot/sendSms
 Send text message

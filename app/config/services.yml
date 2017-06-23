@@ -23,6 +23,25 @@ parameters:
           credentials:
             - accountSid
             - accountToken
+        events:
+        -
+          name: webhookEvent
+          description: Twilio sends data to your application.
+          payload:
+            body: modified message text
+            from: modified from value
+            attributes: '{"key" : "value"}'
+          steps:
+          -
+            Navigate to your twilio app page
+          -
+            Set callback to __WEBHOOK_URL__
+          args:
+          -
+            name: token
+            type: string
+            info: Token sent on each message
+            required: false
         blocks:
         -
           name: sendSms
