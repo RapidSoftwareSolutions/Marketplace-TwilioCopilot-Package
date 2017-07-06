@@ -75,7 +75,7 @@ class PackageController extends Controller
 
     /**
      *
-     * @Route("/api/{packageName}/webhookEvent", requirements={"packageName": "Twilio"})
+     * @Route("/api/{packageName}/webhookEvent", requirements={"packageName": "TwilioCopilot"})
      * @Method({"POST"})
      *
      * @return JsonResponse
