@@ -26,16 +26,16 @@ parameters:
         events:
         -
           name: webhookEvent
-          description: Twilio sends data to your application.
+          description: This method is called every time a Twilio Copilot event occurs
           payload:
             body: modified message text
             from: modified from value
             attributes: '{"key" : "value"}'
           steps:
           -
-            Navigate to your twilio app page
+            Navigate to your Twilio Copilot app page
           -
-            Set callback to __WEBHOOK_URL__
+            Configure the events to use webhooks with the following URL __WEBHOOK_URL__
           args:
           -
             name: token
