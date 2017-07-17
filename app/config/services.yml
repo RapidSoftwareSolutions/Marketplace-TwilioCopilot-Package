@@ -28,9 +28,9 @@ parameters:
           name: webhookEvent
           description: This method is called every time a Twilio Copilot event occurs
           payload:
-            body: modified message text
-            from: modified from value
-            attributes: '{"key" : "value"}'
+            Body: modified message text
+            From: modified from value
+            Attributes: '{"key" : "value"}'
           steps:
           -
             Navigate to your Twilio Copilot app page
